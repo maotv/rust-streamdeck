@@ -92,7 +92,9 @@ pub mod pids {
     pub const ORIGINAL: u16 = 0x0060;
     pub const ORIGINAL_V2: u16 = 0x006d;
     pub const MINI: u16 = 0x0063;
+    pub const MINI_V2: u16 = 0x0090;
     pub const XL: u16 = 0x006c;
+    pub const XL_V2: u16 = 0x008f;
     pub const MK2: u16 = 0x0080;
 }
 
@@ -115,9 +117,11 @@ impl StreamDeck {
         let kind = match pid {
             pids::ORIGINAL => Kind::Original,
             pids::MINI => Kind::Mini,
+            pids::MINI_V2 => Kind::Mini,
 
             pids::ORIGINAL_V2 => Kind::OriginalV2,
             pids::XL => Kind::Xl,
+            pids::XL_V2 => Kind::Xl,
             pids::MK2 => Kind::Mk2,
 
             _ => return Err(Error::UnrecognisedPID),
