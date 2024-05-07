@@ -92,6 +92,7 @@ pub mod pids {
     pub const MINI: u16 = 0x0063;
     pub const XL: u16 = 0x006c;
     pub const MK2: u16 = 0x0080;
+    pub const REVISED_XL: u16 = 0x008f;
     pub const REVISED_MINI: u16 = 0x0090;
 }
 
@@ -117,6 +118,7 @@ impl StreamDeck {
 
             pids::ORIGINAL_V2 => Kind::OriginalV2,
             pids::XL => Kind::Xl,
+            pids::REVISED_XL => Kind::Xl,
             pids::MK2 => Kind::Mk2,
             pids::REVISED_MINI => Kind::RevisedMini,
 
